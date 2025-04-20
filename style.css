@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Fleshandblood';
+    src: url('./assets/fonts/Fleshandblood-MVA5x.ttf');
+}  
+
+h1 {
+    font-family: 'Fleshandblood', sans-serif;
+    font-size: 2.5em;
+    color: #ff0000;
+    text-align: center;
+}
+
+p {
+    font-family: "IM Fell English", serif;
+    font-weight: 400;
+    /* font-style: italic; */
+}
