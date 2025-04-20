@@ -1,17 +1,68 @@
 @font-face {
     font-family: 'Fleshandblood';
     src: url('./assets/fonts/Fleshandblood-MVA5x.ttf');
-}  
+}
+
+:root {
+    --wine-900:#9A1818;
+    --wine-600:#7F3335;
+    --wine-400:#99585C;
+    --wine-200:#C5A8AA;
+
+    --black-900:#1A0B06;
+    --black-600:#34302F;
+
+    margin: 0;
+    padding: 0;
+
+    font-family: "IM Fell English", serif;
+    font-weight: 400;
+    color: var(--black-600);
+}
+
+span {
+    color: var(--wine-900);
+    font-weight: bold;
+}
+
+/* header {
+    margin: ;
+} */
 
 h1 {
     font-family: 'Fleshandblood', sans-serif;
     font-size: 2.5em;
-    color: #ff0000;
+    color: var(--wine-900);
     text-align: center;
 }
 
 p {
     font-family: "IM Fell English", serif;
     font-weight: 400;
-    /* font-style: italic; */
+}
+
+.products {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.products .product {
+    display: flex;
+    width: 800px;
+    gap: 20px;
+    
+}
+
+.products .product:first-child {
+    flex-direction: row-reverse;
+}
+
+.products .product img {
+    width: 400px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 4px;
 }
