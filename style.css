@@ -36,14 +36,24 @@ html {
     --wine-200:#C5A8AA;
 
     --black-900:#1A0B06;
-    --black-600:#34302F;
+    --black-600:#5e6368;
+    --black-100:#BFC4C3;
+    ;
 
     margin: 0;
     padding: 0;
 
     font-family: "IM Fell English", serif;
     font-weight: 400;
-    color: var(--black-600);
+    color: var(--black-100);
+    background-color: var(--black-600);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 span {
@@ -51,9 +61,9 @@ span {
     font-weight: bold;
 }
 
-/* header {
-    margin: ;
-} */
+header {
+    margin: 40px;
+}
 
 h1 {
     font-family: 'Fleshandblood', sans-serif;
@@ -62,9 +72,16 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    font-family: 'Fleshandblood', sans-serif;
+    font-size: 1.5em;
+    color: var(--black-900);
+}
+
 p {
     font-family: "IM Fell English", serif;
     font-weight: 400;
+    color: var(--black-100);
 }
 
 .products {
@@ -91,4 +108,71 @@ p {
     background-size: cover;
     background-position: center;
     border-radius: 4px;
+}
+
+.team-section{
+    margin: 80px;
+    width: 800px;
+}
+
+.team-section h2 {
+    font-family: 'Fleshandblood', sans-serif;
+    font-size: 1.5em;
+    color: var(--black-900);
+    text-align: center;
+
+    margin-bottom: 20px;
+}
+
+.team-section h3 {
+    font-size: 24px;
+    color: var(--wine-900);
+}
+
+.team-section p {
+    font-size: 14px;
+}
+
+.team-section img {
+    height: 150px;
+    width: 150px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.team-section .team-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.team-section .team-container .main-team-member{
+    width: 60%;
+    
+}
+
+.team-section .team-container .team-member {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    
+}
+
+.team-section .team-container .team-member .cargo{
+    font-style: italic;
+    color: var(--black-900);
+    margin-top: -5px;
+    margin-bottom: 10px;
+}
+
+
+.flex-team-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
 }
