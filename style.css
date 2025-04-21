@@ -2,6 +2,8 @@
 html {
     box-sizing: border-box;
     font-size: 16px;
+
+    scroll-behavior: smooth;
   }
   
   *, *:before, *:after {
@@ -125,20 +127,25 @@ html {
     color: var(--wine-600);
     margin-bottom: 0.5rem;
   }
-  
-  .product-text button {
-    margin-top: 1rem;
-    padding: 0.6rem 1.2rem;
-    background-color: var(--wine-600);
-    color: #fff;
+
+  .schedule-btn {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    background-color: #4b2a2a;
+    color: white;
+    font-family: 'Fleshandblood', sans-serif;
+    font-size: 1rem;
     border: none;
     border-radius: 4px;
-    font-weight: bold;
     cursor: pointer;
+    text-align: center;
+    text-decoration: none;
     transition: background-color 0.3s ease;
   }
   
-  .product-text button:hover {
+  
+  .product-text .schedule-btn:hover {
     background-color: var(--wine-900);
   }
   
