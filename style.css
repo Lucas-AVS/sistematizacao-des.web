@@ -1,3 +1,4 @@
+/* ===== Reset Básico ===== */
 html {
     box-sizing: border-box;
     font-size: 16px;
@@ -21,158 +22,240 @@ html {
     max-width: 100%;
     height: auto;
   }
-
-  /* basic css reset */
-
-@font-face {
+  
+  /* ===== Fontes ===== */
+  @font-face {
     font-family: 'Fleshandblood';
     src: url('./assets/fonts/Fleshandblood-MVA5x.ttf');
-}
-
-:root {
-    --wine-900:#9A1818;
-    --wine-600:#7F3335;
-    --wine-400:#99585C;
-    --wine-200:#C5A8AA;
-
-    --black-900:#1A0B06;
-    --black-600:#5e6368;
-    --black-100:#BFC4C3;
-    ;
-
+  }
+  
+  /* ===== Variáveis e Estilo Global ===== */
+  :root {
+    --wine-900: #9A1818;
+    --wine-600: #7F3335;
+    --wine-400: #99585C;
+    --wine-200: #C5A8AA;
+  
+    --black-900: #0D0D0D;
+    --black-600: #1e1e1e;
+    --black-400: #2c2c2c;
+    --black-200: #444;
+    --black-100: #BFC4C3;
+  
     margin: 0;
     padding: 0;
-
+  
     font-family: "IM Fell English", serif;
     font-weight: 400;
     color: var(--black-100);
     background-color: var(--black-600);
-}
-
-main {
+  }
+  
+  main {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-span {
-    color: var(--wine-900);
-    font-weight: bold;
-}
-
-header {
-    margin: 40px;
-}
-
-h1 {
+    padding: 2rem;
+    background-color: var(--black-600);
+  }
+  
+  header {
+    background-color: var(--black-900);
+    padding: 2rem;
+    border-bottom: 2px solid var(--wine-600);
+  }
+  
+  h1 {
     font-family: 'Fleshandblood', sans-serif;
     font-size: 2.5em;
     color: var(--wine-900);
     text-align: center;
-}
-
-h2 {
+    text-shadow: 2px 2px 0 var(--black-400);
+  }
+  
+  h2 {
     font-family: 'Fleshandblood', sans-serif;
     font-size: 1.5em;
-    color: var(--black-900);
-}
-
-p {
+    color: var(--wine-600);
+    margin-bottom: 0.5rem;
+  }
+  
+  p {
     font-family: "IM Fell English", serif;
     font-weight: 400;
     color: var(--black-100);
-}
-
-.products {
+  }
+  
+  span {
+    color: var(--wine-400);
+    font-weight: bold;
+  }
+  
+  /* ===== Produtos / Serviços ===== */
+  .products {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 30px;
-}
-
-.products .product {
+  }
+  
+  .products .product {
     display: flex;
     width: 800px;
     gap: 20px;
-    
-}
-
-.products .product:first-child {
+    background-color: var(--black-400);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(154, 24, 24, 0.2);
+  }
+  
+  .products .product:first-child {
     flex-direction: row-reverse;
-}
-
-.products .product img {
+  }
+  
+  .products .product img {
     width: 400px;
-    background-size: cover;
-    background-position: center;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+  
+  .product-text h2 {
+    color: var(--wine-600);
+    margin-bottom: 0.5rem;
+  }
+  
+  .product-text button {
+    margin-top: 1rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--wine-600);
+    color: #fff;
+    border: none;
     border-radius: 4px;
-}
-
-.team-section{
-    margin: 80px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .product-text button:hover {
+    background-color: var(--wine-900);
+  }
+  
+  /* ===== Equipe Médica ===== */
+  .team-section {
+    margin: 80px auto;
     width: 800px;
-}
-
-.team-section h2 {
-    font-family: 'Fleshandblood', sans-serif;
-    font-size: 1.5em;
-    color: var(--black-900);
+    background-color: var(--black-400);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(154, 24, 24, 0.1);
+  }
+  
+  .team-section h2 {
+    color: var(--wine-600);
     text-align: center;
-
     margin-bottom: 20px;
-}
-
-.team-section h3 {
+  }
+  
+  .team-section h3 {
     font-size: 24px;
     color: var(--wine-900);
-}
-
-.team-section p {
+  }
+  
+  .team-section p {
     font-size: 14px;
-}
-
-.team-section img {
+  }
+  
+  .team-section img {
     height: 150px;
     width: 150px;
     object-fit: contain;
     border-radius: 50%;
-}
-
-.team-section .team-container {
+  }
+  
+  .team-section .team-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 30px;
-}
-
-.team-section .team-container .main-team-member{
+  }
+  
+  .team-section .team-container .main-team-member {
     width: 60%;
-    
-}
-
-.team-section .team-container .team-member {
+  }
+  
+  .team-section .team-container .team-member {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 20px;
-    
-}
-
-.team-section .team-container .team-member .cargo{
+    background-color: var(--black-900);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: inset 0 0 5px var(--wine-900);
+  }
+  
+  .team-section .team-container .team-member .cargo {
     font-style: italic;
-    color: var(--black-900);
+    color: var(--wine-400);
     margin-top: -5px;
     margin-bottom: 10px;
-}
-
-
-.flex-team-container {
+  }
+  
+  .flex-team-container {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 20px;
-}
+  }
+  
+  /* ===== Formulário ===== */
+  .form-section {
+    padding: 2rem;
+    background-color: var(--black-900);
+    color: #ddd;
+    font-family: 'IM Fell English', serif;
+    border-top: 2px solid var(--wine-600);
+  }
+  
+  .form-section h2 {
+    color: var(--wine-600);
+    text-align: center;
+  }
+  
+  .clinic-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 2rem auto 0 auto;
+  }
+  
+  .clinic-form input,
+  .clinic-form select,
+  .clinic-form textarea {
+    padding: 0.5rem;
+    background-color: var(--black-400);
+    color: #fff;
+    border: 1px solid #555;
+    border-radius: 4px;
+  }
+  
+  .clinic-form button {
+    padding: 0.7rem;
+    background-color: var(--wine-600);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .clinic-form button:hover {
+    background-color: var(--wine-900);
+  }
+  
