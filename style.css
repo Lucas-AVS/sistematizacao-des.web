@@ -1,268 +1,271 @@
 /* ===== Reset Básico ===== */
 html {
-    box-sizing: border-box;
-    font-size: 16px;
+  box-sizing: border-box;
+  font-size: 18px;
+  scroll-behavior: smooth;
+}
 
-    scroll-behavior: smooth;
-  }
-  
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-  
-  body, h1, h2, h3, h4, h5, h6, p, ol, ul {
-    margin: 0;
-    padding: 0;
-    font-weight: normal;
-  }
-  
-  ol, ul {
-    list-style: none;
-  }
-  
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  /* ===== Fontes ===== */
-  @font-face {
-    font-family: 'Fleshandblood';
-    src: url('./assets/fonts/Fleshandblood-MVA5x.ttf');
-  }
-  
-  /* ===== Variáveis e Estilo Global ===== */
-  :root {
-    --wine-900: #9A1818;
-    --wine-600: #7F3335;
-    --wine-400: #99585C;
-    --wine-200: #C5A8AA;
-  
-    --black-900: #0D0D0D;
-    --black-600: #1e1e1e;
-    --black-400: #2c2c2c;
-    --black-200: #444;
-    --black-100: #BFC4C3;
-  
-    margin: 0;
-    padding: 0;
-  
-    font-family: "IM Fell English", serif;
-    font-weight: 400;
-    color: var(--black-100);
-    background-color: var(--black-600);
-  }
-  
-  main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-    background-color: var(--black-600);
-  }
-  
-  header {
-    background-color: var(--black-900);
-    padding: 2rem;
-    border-bottom: 2px solid var(--wine-600);
-  }
-  
-  h1 {
-    font-family: 'Fleshandblood', sans-serif;
-    font-size: 2.5em;
-    color: var(--wine-900);
-    text-align: center;
-    text-shadow: 2px 2px 0 var(--black-400);
-  }
-  
-  h2 {
-    font-family: 'Fleshandblood', sans-serif;
-    font-size: 1.5em;
-    color: var(--wine-600);
-    margin-bottom: 0.5rem;
-  }
-  
-  p {
-    font-family: "IM Fell English", serif;
-    font-weight: 400;
-    color: var(--black-100);
-  }
-  
-  span {
-    color: var(--wine-400);
-    font-weight: bold;
-  }
-  
-  /* ===== Produtos / Serviços ===== */
-  .products {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-  }
-  
-  .products .product {
-    display: flex;
-    width: 800px;
-    gap: 20px;
-    background-color: var(--black-400);
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(154, 24, 24, 0.2);
-  }
-  
-  .products .product:first-child {
-    flex-direction: row-reverse;
-  }
-  
-  .products .product img {
-    width: 400px;
-    object-fit: cover;
-    border-radius: 6px;
-  }
-  
-  .product-text h2 {
-    color: var(--wine-600);
-    margin-bottom: 0.5rem;
-  }
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
-  .schedule-btn {
-    display: inline-block;
-    margin-top: 0.5rem;
-    padding: 0.5rem;
-    background-color: #4b2a2a;
-    color: white;
-    font-family: 'Fleshandblood', sans-serif;
-    font-size: 1rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-  }
-  
-  
-  .product-text .schedule-btn:hover {
-    background-color: var(--wine-900);
-  }
-  
-  /* ===== Equipe Médica ===== */
-  .team-section {
-    margin: 80px auto;
-    width: 800px;
-    background-color: var(--black-400);
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(154, 24, 24, 0.1);
-  }
-  
-  .team-section h2 {
-    color: var(--wine-600);
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .team-section h3 {
-    font-size: 24px;
-    color: var(--wine-900);
-  }
-  
-  .team-section p {
-    font-size: 14px;
-  }
-  
-  .team-section img {
-    height: 150px;
-    width: 150px;
-    object-fit: contain;
-    border-radius: 50%;
-  }
-  
-  .team-section .team-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-  }
-  
-  .team-section .team-container .main-team-member {
-    width: 60%;
-  }
-  
-  .team-section .team-container .team-member {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    background-color: var(--black-900);
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: inset 0 0 5px var(--wine-900);
-  }
-  
-  .team-section .team-container .team-member .cargo {
-    font-style: italic;
-    color: var(--wine-400);
-    margin-top: -5px;
-    margin-bottom: 10px;
-  }
-  
-  .flex-team-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  /* ===== Formulário ===== */
-  .form-section {
-    padding: 2rem;
-    background-color: var(--black-900);
-    color: #ddd;
-    font-family: 'IM Fell English', serif;
-    border-top: 2px solid var(--wine-600);
-  }
-  
-  .form-section h2 {
-    color: var(--wine-600);
-    text-align: center;
-  }
-  
-  .clinic-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    max-width: 500px;
-    margin: 2rem auto 0 auto;
-  }
-  
-  .clinic-form input,
-  .clinic-form select,
-  .clinic-form textarea {
-    padding: 0.5rem;
-    background-color: var(--black-400);
-    color: #fff;
-    border: 1px solid #555;
-    border-radius: 4px;
-  }
-  
-  .clinic-form button {
-    padding: 0.7rem;
-    background-color: var(--wine-600);
-    color: white;
-    font-weight: bold;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .clinic-form button:hover {
-    background-color: var(--wine-900);
-  }
-  
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===== Fontes ===== */
+@font-face {
+  font-family: 'Fleshandblood';
+  src: url('./assets/fonts/Fleshandblood-MVA5x.ttf');
+}
+
+/* ===== Variáveis e Estilo Global ===== */
+:root {
+  --wine-900: #9A1818;
+  --wine-600: #7F3335;
+  --wine-400: #99585C;
+  --wine-200: #C5A8AA;
+
+  --black-900: #0D0D0D;
+  --black-600: #1e1e1e;
+  --black-400: #2c2c2c;
+  --black-200: #444;
+  --black-100: #BFC4C3;
+
+  margin: 0;
+  padding: 0;
+
+  font-family: "IM Fell English", serif;
+  font-weight: 400;
+  color: var(--black-100);
+  background-color: var(--black-600);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  background-color: var(--black-600);
+}
+
+header {
+  background-color: var(--black-900);
+  padding: 3rem;
+  border-bottom: 2px solid var(--wine-600);
+}
+
+h1 {
+  font-family: 'Fleshandblood', sans-serif;
+  font-size: 3em;
+  color: var(--wine-900);
+  text-align: center;
+  text-shadow: 2px 2px 0 var(--black-400);
+}
+
+h2 {
+  font-family: 'Fleshandblood', sans-serif;
+  font-size: 2em;
+  color: var(--wine-600);
+  margin-bottom: 0.75rem;
+}
+
+p {
+  font-family: "IM Fell English", serif;
+  font-weight: 400;
+  font-size: 1.125rem;
+  color: var(--black-100);
+}
+
+span {
+  color: var(--wine-400);
+  font-weight: bold;
+}
+
+/* ===== Produtos / Serviços ===== */
+.products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.products .product {
+  display: flex;
+  width: 900px;
+  gap: 30px;
+  background-color: var(--black-400);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(154, 24, 24, 0.25);
+}
+
+.products .product:first-child {
+  flex-direction: row-reverse;
+}
+
+.products .product img {
+  width: 440px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product-text h2 {
+  color: var(--wine-600);
+  font-size: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.schedule-btn {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.75rem 1.25rem;
+  background-color: #4b2a2a;
+  color: white;
+  font-family: 'Fleshandblood', sans-serif;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.schedule-btn:hover {
+  background-color: var(--wine-900);
+}
+
+/* ===== Equipe Médica ===== */
+.team-section {
+  margin: 100px auto;
+  width: 900px;
+  background-color: var(--black-400);
+  padding: 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(154, 24, 24, 0.15);
+}
+
+.team-section h2 {
+  color: var(--wine-600);
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2em;
+}
+
+.team-section h3 {
+  font-size: 1.5rem;
+  color: var(--wine-900);
+}
+
+.team-section p {
+  font-size: 1rem;
+}
+
+.team-section img {
+  height: 170px;
+  width: 170px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.team-section .team-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.team-section .team-container .main-team-member {
+  width: 70%;
+}
+
+.team-section .team-container .team-member {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  background-color: var(--black-900);
+  padding: 1.25rem;
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px var(--wine-900);
+}
+
+.team-section .team-container .team-member .cargo {
+  font-style: italic;
+  color: var(--wine-400);
+  margin-top: -5px;
+  margin-bottom: 10px;
+}
+
+.flex-team-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+/* ===== Formulário ===== */
+.form-section {
+  padding: 3rem;
+  background-color: var(--black-900);
+  color: #ddd;
+  font-family: 'IM Fell English', serif;
+  border-top: 2px solid var(--wine-600);
+}
+
+.form-section h2 {
+  color: var(--wine-600);
+  text-align: center;
+  font-size: 2em;
+}
+
+.clinic-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 550px;
+  margin: 2.5rem auto 0 auto;
+}
+
+.clinic-form input,
+.clinic-form select,
+.clinic-form textarea {
+  padding: 0.75rem;
+  background-color: var(--black-400);
+  color: #fff;
+  border: 1px solid #555;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.clinic-form button {
+  padding: 0.85rem;
+  background-color: var(--wine-600);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.clinic-form button:hover {
+  background-color: var(--wine-900);
+}
